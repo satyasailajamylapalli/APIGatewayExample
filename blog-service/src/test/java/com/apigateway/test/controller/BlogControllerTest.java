@@ -96,7 +96,7 @@ public class BlogControllerTest {
         when(blogService.updateBlog(any())).thenReturn(blog);
         mockMvc.perform(put("/api/v1/blog").contentType(MediaType.APPLICATION_JSON).content(asJsonString(blog)))
                 .andExpect(status().isOk()).andDo(MockMvcResultHandlers.print());
-    }
+    }  
 
     public static String asJsonString(final Object obj) {
         try {
